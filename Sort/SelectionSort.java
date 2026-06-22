@@ -1,23 +1,21 @@
 import java.util.Arrays;
-// Complexity: 1> Time : Best and Worst O(N^2)
+// Time: O(n²) in best, average, and worst cases.
+// Space: O(1).
 
 public class SelectionSort {
     public static void main(String[] args) {
-        int[] arr = {-1,0,72,-32,4,2,67};
-        select(arr);
+        int[] arr = {2,4,-3,6,1};
+        selection(arr);
         System.out.println(Arrays.toString(arr));
-
     }
-    static void select(int[] arr){
-
-        for(int i=0;i< arr.length; i++){
-            // Find the max element in the array and swap it with correct index
+    static void selection(int[] arr){
+        for(int i=0;i< arr.length;i++){
             int last = arr.length-i-1;
             int maxIndex = getMaxIndex(arr,0,last);
             swap(arr,maxIndex,last);
         }
     }
-    static int getMaxIndex(int[] arr,int start,int end) {
+    static int getMaxIndex(int[] arr,int start,int end){
         int max = start;
         for(int i=start;i<=end;i++){
             if(arr[i]>arr[max]){
@@ -26,7 +24,7 @@ public class SelectionSort {
         }
         return max;
     }
-    static void swap(int[] arr,int first, int second){
+    static void swap(int[] arr, int first, int second){
         int temp = arr[first];
         arr[first] = arr[second];
         arr[second] = temp;
