@@ -23,7 +23,10 @@ A collection of Data Structures and Algorithms implementations written in Java w
 - Selection Sort
 - Bubble Sort
 - Insertion Sort
-- (More algorithms will be added)
+- Cyclic Sort
+
+### Maths
+- Bit Manipulation
 
 ## Technologies Used
 - Java
@@ -38,6 +41,8 @@ Data-Structures/
 ├── Linear Search/
 ├── Recursion/
 └── Sort/
+└── Maths/
+
 
 ## Goals
 - Learn core Data Structures and Algorithms
