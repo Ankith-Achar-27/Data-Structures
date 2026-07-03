@@ -12,7 +12,7 @@ package Bit_Manipulation;
 
 public class NoOfDigits {
     public static void main(String[] args) {
-        int n = 344545;
+        int n = 344545;  // And : 19
         int base = 2;
         int digits = (int)(Math.log(n) / Math.log(base)) + 1;
         System.out.println(digits);
