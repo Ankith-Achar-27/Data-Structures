@@ -42,12 +42,12 @@ public class HashSetExample {
         set.add(4);
         set.add(1);// wont allow as only unique is allowed
         set.add(7);
-        System.out.println("After adding duplicate 1: " + set);
+        System.out.println("After adding duplicate 1: " + set); // After adding duplicate 1: [1, 2, 3, 4, 7]
         if(set.contains(4)){
-            System.out.println("set contains 4");
+            System.out.println("set contains 4"); // set contains 4
         }
         if (!set.contains(6)){
-            System.out.println("set does not contain 6");
+            System.out.println("set does not contain 6"); // set does not contain 6
         }
 
 //        Remove elements
@@ -56,6 +56,8 @@ public class HashSetExample {
             set.remove(7);
             System.out.println("Set after element removed: "+set);
         }
+        // Remove element 7 if exists
+        // Set after element removed: [1, 2, 3, 4]
 
 //        Iterator
         Iterator<Integer> it = set.iterator();
@@ -64,7 +66,7 @@ public class HashSetExample {
 //         .hasNext give True or false
         System.out.println("Through Iterator Class: ");
         while (it.hasNext()){
-            System.out.print(it.next()+"\t");
+            System.out.print(it.next()+"\t"); // 1	2	3	4
         }
         System.out.println();
 
@@ -72,17 +74,17 @@ public class HashSetExample {
 //    To traverse the set
         System.out.println("Through the loop: ");
         for (int n:set){
-            System.out.print(n+"\t");
+            System.out.print(n+"\t"); // 1	2	3	4
         }
 
-        System.out.println("\nSize of the set: "+set.size());
+        System.out.println("\nSize of the set: "+set.size()); // 4
 
-        System.out.println("To check set is empty or not: "+set.isEmpty());
+        System.out.println("To check set is empty or not: "+set.isEmpty()); // false
 
 //        Clear
         set.clear();
-        System.out.println("After clear(): " + set);
-        System.out.println("Is Empty: " + set.isEmpty());
+        System.out.println("After clear(): " + set); // []
+        System.out.println("Is Empty: " + set.isEmpty()); // true
 
 
 //        Set order is unpredictable
@@ -91,6 +93,6 @@ public class HashSetExample {
         set.add(30);
         set.add(40);
 
-        System.out.println("Order should be [10,20,30,40]: "+set);
+        System.out.println("Order should be [10,20,30,40]: "+set); // [20, 40, 10, 30]
     }
 }
