@@ -28,6 +28,9 @@ A collection of Data Structures and Algorithms implementations written in Java w
 ### Maths
 - Bit Manipulation
 
+### Hashing
+- HashSet
+
 ## Technologies Used
 - Java
 - IntelliJ IDEA
