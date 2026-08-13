@@ -4,11 +4,11 @@ public class LinearSearchRecursion {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,4,5};
         int target = 4;
+        ArrayList<Integer> list = new ArrayList<>();
         System.out.println(find(arr,target,0));
         System.out.println(findIndex(arr,target,0));
         System.out.println(findLastIndex(arr,target, arr.length-1));
-        findAllIndex(arr,target, 0);
-        System.out.println(list);
+        System.out.println(findAllIndex(arr,target,0,list));
 
     }
     static boolean find(int[]arr,int tar,int index){
@@ -35,14 +35,13 @@ public class LinearSearchRecursion {
         }
         return findIndex(arr,tar,index-1);
     }
-    static ArrayList<Integer> list = new ArrayList<>();
-    static void findAllIndex(int[] arr,int tar,int index){
+    static ArrayList findAllIndex(int[] arr,int tar,int index,ArrayList<Integer> list){
         if(index== arr.length){
-            return;
+            return list;
         }
         if(arr[index] == tar){
             list.add(index);
         }
-        findAllIndex(arr, tar, index+1);
+        return findAllIndex(arr, tar, index+1,list);
     }
 }
